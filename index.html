@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>CapturePoint · Corecrete LLC</title>
+<meta name="description" content="CapturePoint walkthrough set up for Corecrete LLC — calls, jobs, money and crew in one place.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="top-in">
+    <div class="logo"><span class="dot"></span>CapturePoint</div>
+    <div class="biz"><b id="bizName">Corecrete LLC</b><span id="bizMeta">Atlanta, GA</span></div>
+    <div class="spacer"></div>
+    <div class="demo-tag">Demo</div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <nav class="nav" id="nav">
+    <button data-v="today" class="on"><span class="g">◎</span>Today</button>
+    <button data-v="calls"><span class="g">✆</span>Calls</button>
+    <button data-v="jobs"><span class="g">▦</span>Jobs</button>
+    <button data-v="money"><span class="g">$</span>Money</button>
+    <button data-v="crew"><span class="g">◍</span>Crew</button>
+    <button data-v="customers"><span class="g">☰</span>People</button>
+  </nav>
+
+  <main class="views">
+
+    <!-- TODAY -->
+    <section class="view on" id="v-today">
+      <h1>Good morning, Rogelio</h1>
+      <p class="sub" id="todaySub"></p>
+      <div class="banner">
+        <b>This is a walkthrough, not your live account.</b> Every call, job, customer and figure below is made-up sample
+        data, set up to look like a week at Corecrete so you can see how the system would run your day.
+      </div>
+
+      <div class="grid kpis" id="kpis"></div>
+
+      <div class="two">
+        <div>
+          <h2>How your calls are going</h2>
+          <div class="card">
+            <div class="chart" id="chart"></div>
+            <div class="legend">
+              <span><i style="background:var(--green)"></i>Answered</span>
+              <span><i style="background:var(--red)"></i>Missed</span>
+            </div>
+            <p class="hint" style="margin:12px 0 0" id="chartNote"></p>
+          </div>
+        </div>
+        <div>
+          <h2>Where the money is</h2>
+          <div class="card" id="moneyMini"></div>
+        </div>
+      </div>
+
+      <h2>On site today</h2>
+      <div class="card" id="todayCrew"></div>
+    </section>
+
+    <!-- CALLS -->
+    <section class="view" id="v-calls">
+      <h1>Calls</h1>
+      <p class="sub">Every call answered, written up, and turned into a job without you touching the phone.</p>
+      <div class="grid kpis" id="callKpis" style="margin-bottom:16px"></div>
+      <div class="card" id="callList"></div>
+    </section>
+
+    <!-- JOBS -->
+    <section class="view" id="v-jobs">
+      <h1>Jobs</h1>
+      <p class="sub">Where every job stands, from first call to paid.</p>
+      <p class="hint">Where this job is. Tap a step to move it.</p>
+      <div id="jobList"></div>
+    </section>
+
+    <!-- MONEY -->
+    <section class="view" id="v-money">
+      <h1>Money</h1>
+      <p class="sub">Quotes chased, invoices sent, payments followed up — without you doing it at 9pm.</p>
+      <div class="grid kpis" id="moneyKpis" style="margin-bottom:16px"></div>
+      <h2>Quotes out</h2>
+      <div class="card" id="quoteList"></div>
+      <h2>Invoices</h2>
+      <div class="card" id="invList"></div>
+      <h2>Review requests</h2>
+      <div class="card" id="revList"></div>
+    </section>
+
+    <!-- CREW -->
+    <section class="view" id="v-crew">
+      <h1>Crew</h1>
+      <p class="sub">Who is where, and what they have told you today.</p>
+      <h2>Today</h2>
+      <div class="card" id="crewList"></div>
+      <h2>Crew updates</h2>
+      <div class="card" id="crewFeed"></div>
+    </section>
+
+    <!-- CUSTOMERS -->
+    <section class="view" id="v-customers">
+      <h1>People</h1>
+      <p class="sub">Find a customer by name, phone or street.</p>
+      <input class="search" id="custSearch" placeholder="Start typing a customer's name…" autocomplete="off">
+      <div class="card" id="custList" style="margin-top:10px"></div>
+    </section>
+
+  </main>
+</div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
